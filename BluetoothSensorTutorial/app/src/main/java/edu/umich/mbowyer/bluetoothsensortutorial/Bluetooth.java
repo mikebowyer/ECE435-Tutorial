@@ -307,7 +307,7 @@ public class Bluetooth {
             } catch (IOException e) {
                 Log.e(TAG, "Socket Type: " + mSocketType + "listen() failed", e);
             }
-            mmServerSocket = tmp;//if sucessful, assign the socket to the temporary socket
+            mmServerSocket = tmp;//if successful, assign the socket to the temporary socket
         }
 
         public void run() {//called at acceptthread.start
