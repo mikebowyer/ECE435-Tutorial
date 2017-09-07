@@ -29,7 +29,7 @@ public class Bluetooth {
     public static boolean supports_BT;//true=when device supports bluetooth, false=device doesn't support bluetooth.
     public static boolean BT_is_enabled; //true=when device supports bluetooth, false=device doesn't support bluetooth.
 
-    public String recievedString;//stored the most recent string of data recieved
+    public String recievedString;//stored the most recent string of data received
     public String connectedDeviceName;//stores the name of the device which is connected to
 
     // Name for the SDP record when creating server socket
@@ -53,7 +53,7 @@ public class Bluetooth {
     private final BluetoothAdapter mAdapter;//connects to bluetooth radio on device
     private final Handler mHandler;//handler that gets info from Bluetooth service
     private AcceptThread mAcceptThread;// private class specified in bluetooth which accepts bluetooth communication thread
-    private ConnectThread mConnectThread;// runs straight thru, attempts to connect, either fails or suceeds
+    private ConnectThread mConnectThread;// runs straight thru, attempts to connect, either fails or succeeds
     private ConnectedThread mConnectedThread;//once connected this class handles the connection
     private int mState;
 
@@ -307,7 +307,7 @@ public class Bluetooth {
             } catch (IOException e) {
                 Log.e(TAG, "Socket Type: " + mSocketType + "listen() failed", e);
             }
-            mmServerSocket = tmp;//if sucessful, assign the socket to the temporary socket
+            mmServerSocket = tmp;//if successful, assign the socket to the temporary socket
         }
 
         public void run() {//called at acceptthread.start
@@ -336,7 +336,7 @@ public class Bluetooth {
                         switch (mState) {
                             case STATE_LISTEN://if listening then keep listening
                             case STATE_CONNECTING:
-                                // Situation normal. Start the connected thread from the functino defined in bluetooth class.
+                                // Situation normal. Start the connected thread from the function defined in bluetooth class.
                                 connected(socket, socket.getRemoteDevice(),
                                         mSocketType);
                                 break;
