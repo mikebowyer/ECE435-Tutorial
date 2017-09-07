@@ -29,7 +29,7 @@ public class Bluetooth {
     public static boolean supports_BT;//true=when device supports bluetooth, false=device doesn't support bluetooth.
     public static boolean BT_is_enabled; //true=when device supports bluetooth, false=device doesn't support bluetooth.
 
-    public String recievedString;//stored the most recent string of data recieved
+    public String recievedString;//stored the most recent string of data received
     public String connectedDeviceName;//stores the name of the device which is connected to
 
     // Name for the SDP record when creating server socket

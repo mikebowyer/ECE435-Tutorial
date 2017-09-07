@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         String str_send = dataToWrite.getText().toString();//create string to send from EditText
         myBT.sendMessage(str_send);//send the string
     }
-    public void updateRecievedDataTextView(String rec_str)//update textview of recieved data
+    public void updateRecievedDataTextView(String rec_str)//update textview of received data
     {
         RecievedDataView.setText(rec_str);//update textview
     }
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 case Bluetooth.MESSAGE_WRITE:// This device attempted to send a message to the remote device
                     Log.d("myDebug", "MESSAGE_WRITE ");
                     break;
-                case Bluetooth.MESSAGE_READ://this dewice recieved a message, and saved it in the myBTRecievedString
+                case Bluetooth.MESSAGE_READ://this dewice received a message, and saved it in the myBTRecievedString
                     Log.d("myDebug", "MESSAGE_READ =" + myBT.recievedString);
                     updateRecievedDataTextView(myBT.recievedString);
                     break;
