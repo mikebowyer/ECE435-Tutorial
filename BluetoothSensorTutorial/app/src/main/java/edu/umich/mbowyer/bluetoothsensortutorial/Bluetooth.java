@@ -53,7 +53,7 @@ public class Bluetooth {
     private final BluetoothAdapter mAdapter;//connects to bluetooth radio on device
     private final Handler mHandler;//handler that gets info from Bluetooth service
     private AcceptThread mAcceptThread;// private class specified in bluetooth which accepts bluetooth communication thread
-    private ConnectThread mConnectThread;// runs straight thru, attempts to connect, either fails or suceeds
+    private ConnectThread mConnectThread;// runs straight thru, attempts to connect, either fails or succeeds
     private ConnectedThread mConnectedThread;//once connected this class handles the connection
     private int mState;
 
