@@ -336,7 +336,7 @@ public class Bluetooth {
                         switch (mState) {
                             case STATE_LISTEN://if listening then keep listening
                             case STATE_CONNECTING:
-                                // Situation normal. Start the connected thread from the functino defined in bluetooth class.
+                                // Situation normal. Start the connected thread from the function defined in bluetooth class.
                                 connected(socket, socket.getRemoteDevice(),
                                         mSocketType);
                                 break;
